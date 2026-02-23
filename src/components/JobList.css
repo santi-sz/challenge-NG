@@ -1,6 +1,6 @@
 .job-list {
   width: 100%;
-  max-width: 1200px; /* ESTE es el recuadro que envuelve las posiciones */
+  max-width: 1200px;
   margin: 0 auto 1.5rem;
 }
 

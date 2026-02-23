@@ -28,7 +28,6 @@ function JobItem({ job, candidate }) {
 
       setSubmitSuccess(true);
     } catch (error) {
-      // Si algo falla, mostramos un mensaje entendible
       setSubmitError(
         error.message || 'No se pudo enviar la postulación. Intentalo de nuevo más tarde.'
       );

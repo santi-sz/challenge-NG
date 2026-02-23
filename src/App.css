@@ -14,14 +14,13 @@
   font-size: 0.95rem;
 }
 
-/* Estilo base reutilizable para las tarjetas */
 .card {
   background: #fff;
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 0 auto 1.5rem;
-  max-width: 640px; /* tamaño moderado para las tarjetas generales (email, bienvenida, etc.) */
+  max-width: 640px;
 }
 
 .card h2 {
@@ -36,7 +35,6 @@
   margin-bottom: 1rem;
 }
 
-/* Botón genérico */
 button {
   padding: 0.6rem 1.5rem;
   background-color: #166534;
@@ -59,7 +57,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Info del candidato ya autenticado */
+.candidate-info {
 .candidate-info {
   background: #f0fdf4;
   border: 1px solid #bbf7d0;
@@ -67,7 +65,6 @@ button:disabled {
   font-size: 0.95rem;
 }
 
-/* Mensajes de error */
 .error-message {
   color: #dc2626;
   font-size: 0.875rem;

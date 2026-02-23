@@ -10,7 +10,7 @@
   padding: 1.25rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 0 auto 1.5rem;
-  max-width: 1200px; /* SOLO las posiciones se estiran al máximo para el link */
+  max-width: 1200px;
 }
 
 .job-item-form {
@@ -20,7 +20,7 @@
 
 .job-item-form input {
   flex: 1;
-  padding: 1rem 1.1rem; /* más alto, mismo ancho */
+  padding: 1rem 1.1rem;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1.05rem;
