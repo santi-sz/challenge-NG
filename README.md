@@ -1,16 +1,22 @@
-# React + Vite
+# Challenge-NG // Santiago Ezequiel Sanchez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Cómo correr la aplicación
 
-Currently, two official plugins are available:
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Levantar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Abrir el navegador en la URL que indica Vite (por defecto `http://localhost:5173` o el puerto que se muestre en consola).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Resumen de la solución
 
-## React Compiler
+La app está hecha en React usando Vite y se apoya fuerte en las llamadas a la API que da el challenge:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Primero se pide el **email** del candidato y se llama a `GET /api/candidate/get-by-email?email=...` para traer `uuid`, `candidateId` y `applicationId`.  
+- Con esos datos en memoria, se consulta la lista de posiciones con `GET /api/jobs/get-list` y se muestran en pantalla, cada una con su input para el link del repositorio.  
+- Cuando el usuario hace clic en **Enviar** para una posición, se manda la postulación con `POST /api/candidate/apply-to-job`, enviando en el body `uuid`, `candidateId`, `applicationId`, `jobId` y la `repoUrl`.  
+- En toda la app se manejan estados de **carga**, **error** y **éxito** de forma simple y visible en la UI, priorizando que se entienda qué está pasando con cada request.  
