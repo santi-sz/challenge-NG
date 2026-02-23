@@ -30,3 +30,27 @@ export async function getJobsList() {
 
   return response.json();
 }
+
+// Envía la postulación de un candidato a una posición específica
+export async function applyToJob({ uuid, candidateId, applicationId, jobId, repoUrl }) {
+  const response = await fetch(`${BASE_URL}/api/candidate/apply-to-job`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      uuid,
+      candidateId,
+      applicationId,
+      jobId,
+      repoUrl,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text().catch(() => 'Error desconocido');
+    throw new Error(`Error al enviar la postulación: ${response.status} - ${errorText}`);
+  }
+
+  return response.json(); // se espera { ok: true }
+}
