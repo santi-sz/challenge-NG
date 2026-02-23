@@ -1,0 +1,23 @@
+.email-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.email-form input {
+  flex: 1;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.email-form input:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.15);
+}
+
+.email-form input:disabled {
+  background: #f3f4f6;
+}

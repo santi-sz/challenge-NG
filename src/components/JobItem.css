@@ -1,0 +1,56 @@
+.job-item h3 {
+  font-size: 1.1rem;
+  color: #16213e;
+  margin-bottom: 0.75rem;
+}
+
+.job-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 1.5rem;
+  max-width: 1200px; /* SOLO las posiciones se estiran al máximo para el link */
+}
+
+.job-item-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.job-item-form input {
+  flex: 1;
+  padding: 1rem 1.1rem; /* más alto, mismo ancho */
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.job-item-form input:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.15);
+}
+
+.job-item-form button {
+  padding: 0.6rem 1.5rem;
+  background-color: #166534;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.job-item-form button:hover:not(:disabled) {
+  background-color: #14532d;
+}
+
+.job-item-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

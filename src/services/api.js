@@ -7,6 +7,11 @@ export async function getCandidateByEmail(email) {
   );
 
   if (!response.ok) {
+    if (response.status === 404) {
+      // Caso típico: no existe un candidato para ese email
+      throw new Error('No se encontró un email asociado');
+    }
+
     const errorText = await response.text().catch(() => 'Error desconocido');
     throw new Error(`Error al obtener candidato: ${response.status} - ${errorText}`);
   }

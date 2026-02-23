@@ -22,7 +22,7 @@ body {
 }
 
 #root {
-  max-width: 960px;
+  max-width: 1200px; /* ancho grande para que el input de repositorio pueda estirarse bien */
   margin: 0 auto;
   padding: 2rem 1rem;
 }
