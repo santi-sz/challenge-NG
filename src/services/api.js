@@ -13,3 +13,15 @@ export async function getCandidateByEmail(email) {
 
   return response.json();
 }
+
+// Lista de posiciones disponibles o abiertas
+export async function getJobsList() {
+  const response = await fetch(`${BASE_URL}/api/jobs/get-list`);
+
+  if (!response.ok) {
+    const errorText = await response.text().catch(() => 'Error desconocido');
+    throw new Error(`Error al obtener posiciones: ${response.status} - ${errorText}`);
+  }
+
+  return response.json();
+}
